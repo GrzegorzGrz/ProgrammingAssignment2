@@ -1,10 +1,12 @@
-## Put comments here that give an overall description of what your
-## functions do
+## This is script for Week 3 assignment
+## conisst of two functions makeCacheMatrix and cacheSolve
+## detailed description inside script
+##temp comments and left for purpose 
 
 
 
 #temp matrix creation for testing purpose
-#  x <- matrix(1:4, 2, 2) 
+##  x <- matrix(1:4, 2, 2) 
 
 ## Function to cache input matrix x
 makeCacheMatrix <- function(x = matrix()) {
