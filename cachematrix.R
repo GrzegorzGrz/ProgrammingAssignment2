@@ -1,15 +1,34 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## Write a short comment describing this function
 
+
+#temp matrix creation for testing purpose
+#  x <- matrix(1:4, 2, 2) 
+
+## Function to cache input matrix x
 makeCacheMatrix <- function(x = matrix()) {
+  x_org <<- as.matrix(x) 
+  x_inv <<- solve(x)
 
 }
 
+#temp run for testing purpose
+## makeCacheMatrix(x)
 
-## Write a short comment describing this function
+## Function to check if for a given matrix (identical) inverse matrix is stored in cache
+# if yes get matrix from cache if not calculate it
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+       
+  if(exists("x_inv")){
+  if(!is.null(x_inv) & identical(x, x_org)) {
+    message("getting cached invesred matrix")
+    return(x_inv)
+  }}
+ m <- solve(x)
+ m
 }
+
+#temp run cache function for testing purpose
+## cacheSolve(x)
